@@ -31,14 +31,14 @@ class RingBuffer(MutableSequence):
         return self._data[self.__shifted(num)]
 
     def insert(self, index: int, value: T) -> None:
-        self._data.insert(self.__shifted(index))
+        self._data.insert(self.__shifted(index), value)
         self.size += 1
 
     def __delitem__(self, index: int) -> None:
         del self._data[self.__shifted(index)]
         self.size -= 1
 
-    def __len__(self) -> None:
+    def __len__(self) -> int:
         return self.size
 
     def __setitem__(self, key: int, value: T) -> None:
@@ -56,7 +56,7 @@ class RingBuffer(MutableSequence):
 
 class LogFrame(object):
 
-    def __init__(self, left_size: int, right_size: int, stream: Iterable[str]):
+    def __init__(self, left_size: int, right_size: int, stream: Iterable[str]) -> None:
         self.left = RingBuffer(stream, left_size)
         self.curr = next(iter(stream))
         self.right = RingBuffer(stream, right_size)
@@ -103,26 +103,26 @@ class LogFrameSearchStream(LogFrameStream):
                  left_size: int = 100, 
                  right_size: int = 100) -> None:
         print(type(logstream))
-        first = islice(logstream, left_size + right_size + 1)
-        finded = [(n, x) for (n, x) in enumerate(first) if predicate(x)]
-        if len(finded) > 1:
+        first = list(islice(logstream, left_size + right_size + 1))
+        found = [(n, x) for (n, x) in enumerate(first) if predicate(x)]
+        if len(found) > 1:
             raise KeyError('There are more then one string '
-                           'satisfies the predicate: {}'.format("\n".join(x[1] for x in finded)))
-
-        super(LogFrameSearchStream, self).__init__(logstream if not finded else [], 
+                           'satisfies the predicate: {}'.format("\n".join(x[1] for x in found)))
+        result_number = found[0][0]
+        super(LogFrameSearchStream, self).__init__(logstream if not found else [], 
                                                    left_size, 
                                                    right_size)
         self.predicate = predicate
-        if finded:
+        if found:
             self.sucess = True
-            if self.left_size < finded[0]:
+            if self.left_size < result_number:
                 self.data = LogFrame(self.left_size, self.right_size, 
-                                     chain(first[finded[0] - self.left_size:], 
+                                     chain(first[result_number - self.left_size:], 
                                            self._input))
-            if self.left_size > finded[0]:
-                self.data = LogFrame(finded[0], 
+            if self.left_size > result_number:
+                self.data = LogFrame(result_number, 
                                      self.right_size,
-                                     first[:finded[0] + self.right_size])
+                                     first[:result_number + self.right_size])
             self._stopped = True
         else:
             self.sucess = False
