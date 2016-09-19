@@ -48,7 +48,14 @@ class LogFrameStream(Iterator):
         self.data = LogFrame(self.left_size, self.right_size, self._input)
 
     def __next__(self) -> LogFrame:
-        self.data.shift(next(self._input))
+        try:
+            self.data.shift(next(self._input))
+        except StopIteration:
+            if self.data._current != len(self.data.buff):
+                self.data.buff.popleft()
+            else:
+                raise StopIteration
+            # self.data.buff.rotate(1)
         return self.data
 
 
