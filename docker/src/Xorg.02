@@ -1,0 +1,317 @@
+[  6141.939] 
+X.Org X Server 1.15.1
+Release Date: 2014-04-13
+[  6141.939] X Protocol Version 11, Revision 0
+[  6141.939] Build Operating System: Linux 3.2.0-61-generic x86_64 Ubuntu
+[  6141.939] Current Operating System: Linux DLD 3.15.10-031510-generic #201408132333 SMP Thu Aug 14 03:35:00 UTC 2014 x86_64
+[  6141.940] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.15.10-031510-generic root=UUID=83d9f91d-f0ef-43aa-8f0b-51def5b89da1 ro quiet splash nomodeset elevator=noop
+[  6141.940] Build Date: 09 December 2014  11:14:53PM
+[  6141.940] xorg-server 2:1.15.1-0ubuntu2.5 (For technical support please see http://www.ubuntu.com/support) 
+[  6141.940] Current version of pixman: 0.30.2
+[  6141.941] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[  6141.941] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[  6141.942] (==) Log file: "/var/log/Xorg.02.log", Time: Fri Jan  2 15:21:31 2015
+[  6141.942] (==) Using config file: "/etc/X11/xorg.conf"
+[  6141.942] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[  6141.943] (==) ServerLayout "Layout0"
+[  6141.943] (**) |-->Screen "Screen0" (0)
+[  6141.943] (**) |   |-->Monitor "Monitor0"
+[  6141.943] (**) |   |-->Device "Device0"
+[  6141.943] (**) |-->Input Device "Keyboard0"
+[  6141.943] (**) |-->Input Device "Mouse0"
+[  6141.943] (==) Automatically adding devices
+[  6141.943] (==) Automatically enabling devices
+[  6141.943] (==) Automatically adding GPU devices
+[  6141.943] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[  6141.943] 	Entry deleted from font path.
+[  6141.943] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[  6141.943] 	Entry deleted from font path.
+[  6141.943] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[  6141.943] 	Entry deleted from font path.
+[  6141.943] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[  6141.943] 	Entry deleted from font path.
+[  6141.943] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[  6141.943] 	Entry deleted from font path.
+[  6141.943] (==) FontPath set to:
+	/usr/share/fonts/X11/misc,
+	/usr/share/fonts/X11/Type1,
+	built-ins
+[  6141.943] (==) ModulePath set to "/usr/lib/x86_64-linux-gnu/xorg/extra-modules,/usr/lib/xorg/extra-modules,/usr/lib/xorg/modules"
+[  6141.943] (WW) Hotplugging is on, devices using drivers 'kbd', 'mouse' or 'vmmouse' will be disabled.
+[  6141.943] (WW) Disabling Keyboard0
+[  6141.943] (WW) Disabling Mouse0
+[  6141.943] (II) Loader magic: 0x7f303d9d4d40
+[  6141.943] (II) Module ABI versions:
+[  6141.943] 	X.Org ANSI C Emulation: 0.4
+[  6141.943] 	X.Org Video Driver: 15.0
+[  6141.943] 	X.Org XInput driver : 20.0
+[  6141.943] 	X.Org Server Extension : 8.0
+[  6141.943] (II) xfree86: Adding drm device (/dev/dri/card0)
+[  6141.945] (--) PCI:*(0:1:0:0) 10de:1381:1043:84ad rev 162, Mem @ 0xfd000000/16777216, 0xc0000000/268435456, 0xd0000000/33554432, I/O @ 0x0000e000/128, BIOS @ 0x????????/524288
+[  6141.945] Initializing built-in extension Generic Event Extension
+[  6141.945] Initializing built-in extension SHAPE
+[  6141.945] Initializing built-in extension MIT-SHM
+[  6141.945] Initializing built-in extension XInputExtension
+[  6141.946] Initializing built-in extension XTEST
+[  6141.946] Initializing built-in extension BIG-REQUESTS
+[  6141.946] Initializing built-in extension SYNC
+[  6141.946] Initializing built-in extension XKEYBOARD
+[  6141.947] Initializing built-in extension XC-MISC
+[  6141.948] Initializing built-in extension SECURITY
+[  6141.948] Initializing built-in extension XINERAMA
+[  6141.948] Initializing built-in extension XFIXES
+[  6141.948] Initializing built-in extension RENDER
+[  6141.948] Initializing built-in extension RANDR
+[  6141.948] Initializing built-in extension COMPOSITE
+[  6141.948] Initializing built-in extension DAMAGE
+[  6141.949] Initializing built-in extension MIT-SCREEN-SAVER
+[  6141.949] Initializing built-in extension DOUBLE-BUFFER
+[  6141.949] Initializing built-in extension RECORD
+[  6141.949] Initializing built-in extension DPMS
+[  6141.949] Initializing built-in extension Present
+[  6141.949] Initializing built-in extension DRI3
+[  6141.949] Initializing built-in extension X-Resource
+[  6141.950] Initializing built-in extension XVideo
+[  6141.950] Initializing built-in extension XVideo-MotionCompensation
+[  6141.950] Initializing built-in extension SELinux
+[  6141.950] Initializing built-in extension XFree86-VidModeExtension
+[  6141.950] Initializing built-in extension XFree86-DGA
+[  6141.950] Initializing built-in extension XFree86-DRI
+[  6141.950] Initializing built-in extension DRI2
+[  6141.950] (II) LoadModule: "glx"
+[  6141.951] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[  6141.967] (II) Module glx: vendor="NVIDIA Corporation"
+[  6141.967] 	compiled for 4.0.2, module version = 1.0.0
+[  6141.967] 	Module class: X.Org Server Extension
+[  6141.967] (II) NVIDIA GLX Module  346.16  Fri Nov  7 16:24:03 PST 2014
+[  6141.967] Loading extension GLX
+[  6141.967] (II) LoadModule: "nvidia"
+[  6141.968] (II) Loading /usr/lib/xorg/modules/drivers/nvidia_drv.so
+[  6141.968] (II) Module nvidia: vendor="NVIDIA Corporation"
+[  6141.968] 	compiled for 4.0.2, module version = 1.0.0
+[  6141.968] 	Module class: X.Org Video Driver
+[  6141.968] (II) NVIDIA dlloader X Driver  346.16  Fri Nov  7 15:59:29 PST 2014
+[  6141.968] (II) NVIDIA Unified Driver for all Supported NVIDIA GPUs
+[  6141.968] (--) using VT number 7
+
+[  6141.971] (II) Loading sub module "fb"
+[  6141.971] (II) LoadModule: "fb"
+[  6141.971] (II) Loading /usr/lib/xorg/modules/libfb.so
+[  6141.972] (II) Module fb: vendor="X.Org Foundation"
+[  6141.972] 	compiled for 1.15.1, module version = 1.0.0
+[  6141.972] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6141.972] (II) Loading sub module "wfb"
+[  6141.972] (II) LoadModule: "wfb"
+[  6141.972] (II) Loading /usr/lib/xorg/modules/libwfb.so
+[  6141.972] (II) Module wfb: vendor="X.Org Foundation"
+[  6141.972] 	compiled for 1.15.1, module version = 1.0.0
+[  6141.972] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6141.972] (II) Loading sub module "ramdac"
+[  6141.972] (II) LoadModule: "ramdac"
+[  6141.972] (II) Module "ramdac" already built-in
+[  6141.972] (**) NVIDIA(0): Depth 24, (--) framebuffer bpp 32
+[  6141.972] (==) NVIDIA(0): RGB weight 888
+[  6141.972] (==) NVIDIA(0): Default visual is TrueColor
+[  6141.972] (==) NVIDIA(0): Using gamma correction (1.0, 1.0, 1.0)
+[  6141.972] (**) NVIDIA(0): Enabling 2D acceleration
+[  6141.995] (II) NVIDIA(GPU-0): Found DRM driver nvidia-drm (20130102)
+[  6141.997] (II) NVIDIA(0): NVIDIA GPU GeForce GTX 750 (GM107-A) at PCI:1:0:0 (GPU-0)
+[  6141.997] (--) NVIDIA(0): Memory: 1048576 kBytes
+[  6141.997] (--) NVIDIA(0): VideoBIOS: 82.07.25.00.38
+[  6141.997] (II) NVIDIA(0): Detected PCI Express Link width: 16X
+[  6142.006] (--) NVIDIA(0): Valid display device(s) on GeForce GTX 750 at PCI:1:0:0
+[  6142.006] (--) NVIDIA(0):     Samsung S27C350 (CRT-0) (boot, connected)
+[  6142.006] (--) NVIDIA(0):     Ancor Communications Inc ASUS PB238 (DFP-0) (connected)
+[  6142.007] (--) NVIDIA(0):     DFP-1
+[  6142.007] (--) NVIDIA(GPU-0): Samsung S27C350 (CRT-0): 400.0 MHz maximum pixel clock
+[  6142.007] (--) NVIDIA(0): Ancor Communications Inc ASUS PB238 (DFP-0): Internal TMDS
+[  6142.007] (--) NVIDIA(GPU-0): Ancor Communications Inc ASUS PB238 (DFP-0): 330.0 MHz maximum pixel clock
+[  6142.007] (--) NVIDIA(0): DFP-1: Internal TMDS
+[  6142.007] (--) NVIDIA(GPU-0): DFP-1: 165.0 MHz maximum pixel clock
+[  6142.007] (**) NVIDIA(0): Using HorizSync/VertRefresh ranges from the EDID for display
+[  6142.007] (**) NVIDIA(0):     device Samsung S27C350 (CRT-0) (Using EDID frequencies has
+[  6142.007] (**) NVIDIA(0):     been enabled on all display devices.)
+[  6142.008] (**) NVIDIA(0): Using HorizSync/VertRefresh ranges from the EDID for display
+[  6142.008] (**) NVIDIA(0):     device Ancor Communications Inc ASUS PB238 (DFP-0) (Using
+[  6142.008] (**) NVIDIA(0):     EDID frequencies has been enabled on all display
+[  6142.008] (**) NVIDIA(0):     devices.)
+[  6142.010] (==) NVIDIA(0): 
+[  6142.010] (==) NVIDIA(0): No modes were requested; the default mode "nvidia-auto-select"
+[  6142.010] (==) NVIDIA(0):     will be used as the requested mode.
+[  6142.010] (==) NVIDIA(0): 
+[  6142.010] (II) NVIDIA(0): Validated MetaModes:
+[  6142.010] (II) NVIDIA(0):     "CRT-0:nvidia-auto-select,DFP-0:nvidia-auto-select"
+[  6142.010] (II) NVIDIA(0): Virtual screen size determined to be 3840 x 1080
+[  6142.011] (--) NVIDIA(0): DPI set to (81, 80); computed from "UseEdidDpi" X config
+[  6142.011] (--) NVIDIA(0):     option
+[  6142.011] (--) Depth 24 pixmap format is 32 bpp
+[  6142.011] (II) NVIDIA: Using 3072.00 MB of virtual memory for indirect memory
+[  6142.011] (II) NVIDIA:     access.
+[  6142.015] (II) NVIDIA(0): Setting mode "CRT-0:nvidia-auto-select,DFP-0:nvidia-auto-select"
+[  6142.168] Loading extension NV-GLX
+[  6142.212] (==) NVIDIA(0): Disabling shared memory pixmaps
+[  6142.212] (==) NVIDIA(0): Backing store enabled
+[  6142.212] (==) NVIDIA(0): Silken mouse enabled
+[  6142.212] (**) NVIDIA(0): DPMS enabled
+[  6142.212] Loading extension NV-CONTROL
+[  6142.212] Loading extension XINERAMA
+[  6142.212] (II) Loading sub module "dri2"
+[  6142.212] (II) LoadModule: "dri2"
+[  6142.212] (II) Module "dri2" already built-in
+[  6142.212] (II) NVIDIA(0): [DRI2] Setup complete
+[  6142.212] (II) NVIDIA(0): [DRI2]   VDPAU driver: nvidia
+[  6142.212] (--) RandR disabled
+[  6142.217] (II) SELinux: Disabled on system
+[  6142.217] (II) Initializing extension GLX
+[  6142.231] (II) XKB: reuse xkmfile /var/lib/xkb/server-B20D7FC79C7F597315E3E501AEF10E0D866E8E92.xkm
+[  6142.234] (II) config/udev: Adding input device Power Button (/dev/input/event1)
+[  6142.234] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[  6142.234] (II) LoadModule: "evdev"
+[  6142.234] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[  6142.234] (II) Module evdev: vendor="X.Org Foundation"
+[  6142.234] 	compiled for 1.15.0, module version = 2.8.2
+[  6142.234] 	Module class: X.Org XInput Driver
+[  6142.234] 	ABI class: X.Org XInput driver, version 20.0
+[  6142.234] (II) Using input driver 'evdev' for 'Power Button'
+[  6142.234] (**) Power Button: always reports core events
+[  6142.234] (**) evdev: Power Button: Device: "/dev/input/event1"
+[  6142.234] (--) evdev: Power Button: Vendor 0 Product 0x1
+[  6142.234] (--) evdev: Power Button: Found keys
+[  6142.234] (II) evdev: Power Button: Configuring as keyboard
+[  6142.234] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+[  6142.234] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[  6142.234] (**) Option "xkb_rules" "evdev"
+[  6142.234] (**) Option "xkb_model" "pc105"
+[  6142.234] (**) Option "xkb_layout" "us,ru"
+[  6142.234] (**) Option "xkb_variant" ","
+[  6142.234] (**) Option "xkb_options" "grp:alt_shift_toggle,grp_led:scroll"
+[  6142.236] (II) XKB: reuse xkmfile /var/lib/xkb/server-5BD46092C922CD443B4EABE4B26B5EFCDED629BD.xkm
+[  6142.236] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[  6142.236] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[  6142.236] (II) Using input driver 'evdev' for 'Power Button'
+[  6142.236] (**) Power Button: always reports core events
+[  6142.236] (**) evdev: Power Button: Device: "/dev/input/event0"
+[  6142.236] (--) evdev: Power Button: Vendor 0 Product 0x1
+[  6142.236] (--) evdev: Power Button: Found keys
+[  6142.236] (II) evdev: Power Button: Configuring as keyboard
+[  6142.236] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+[  6142.236] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+[  6142.236] (**) Option "xkb_rules" "evdev"
+[  6142.236] (**) Option "xkb_model" "pc105"
+[  6142.236] (**) Option "xkb_layout" "us,ru"
+[  6142.236] (**) Option "xkb_variant" ","
+[  6142.236] (**) Option "xkb_options" "grp:alt_shift_toggle,grp_led:scroll"
+[  6142.237] (II) config/udev: Adding drm device (/dev/dri/card0) card0 /sys/devices/pci0000:00/0000:00:02.0/0000:01:00.0/drm/card0
+[  6142.237] (II) config/udev: Ignoring already known drm device (/dev/dri/card0)
+[  6142.237] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=3 (/dev/input/event11)
+[  6142.237] (II) No input driver specified, ignoring this device.
+[  6142.237] (II) This device may have been added with another device file.
+[  6142.238] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=7 (/dev/input/event12)
+[  6142.238] (II) No input driver specified, ignoring this device.
+[  6142.238] (II) This device may have been added with another device file.
+[  6142.238] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=8 (/dev/input/event13)
+[  6142.238] (II) No input driver specified, ignoring this device.
+[  6142.238] (II) This device may have been added with another device file.
+[  6142.238] (II) config/udev: Adding input device   USB Keyboard (/dev/input/event3)
+[  6142.238] (**)   USB Keyboard: Applying InputClass "evdev keyboard catchall"
+[  6142.238] (II) Using input driver 'evdev' for '  USB Keyboard'
+[  6142.238] (**)   USB Keyboard: always reports core events
+[  6142.238] (**) evdev:   USB Keyboard: Device: "/dev/input/event3"
+[  6142.238] (--) evdev:   USB Keyboard: Vendor 0x5af Product 0x802
+[  6142.238] (--) evdev:   USB Keyboard: Found keys
+[  6142.238] (II) evdev:   USB Keyboard: Configuring as keyboard
+[  6142.238] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:12.0/usb4/4-3/4-3:1.0/0003:05AF:0802.0005/input/input6/event3"
+[  6142.238] (II) XINPUT: Adding extended input device "  USB Keyboard" (type: KEYBOARD, id 8)
+[  6142.238] (**) Option "xkb_rules" "evdev"
+[  6142.238] (**) Option "xkb_model" "pc105"
+[  6142.238] (**) Option "xkb_layout" "us,ru"
+[  6142.238] (**) Option "xkb_variant" ","
+[  6142.238] (**) Option "xkb_options" "grp:alt_shift_toggle,grp_led:scroll"
+[  6142.239] (II) config/udev: Adding input device   USB Keyboard (/dev/input/event4)
+[  6142.239] (**)   USB Keyboard: Applying InputClass "evdev keyboard catchall"
+[  6142.239] (II) Using input driver 'evdev' for '  USB Keyboard'
+[  6142.239] (**)   USB Keyboard: always reports core events
+[  6142.239] (**) evdev:   USB Keyboard: Device: "/dev/input/event4"
+[  6142.239] (--) evdev:   USB Keyboard: Vendor 0x5af Product 0x802
+[  6142.239] (--) evdev:   USB Keyboard: Found keys
+[  6142.239] (II) evdev:   USB Keyboard: Configuring as keyboard
+[  6142.239] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:12.0/usb4/4-3/4-3:1.1/0003:05AF:0802.0006/input/input7/event4"
+[  6142.239] (II) XINPUT: Adding extended input device "  USB Keyboard" (type: KEYBOARD, id 9)
+[  6142.239] (**) Option "xkb_rules" "evdev"
+[  6142.239] (**) Option "xkb_model" "pc105"
+[  6142.239] (**) Option "xkb_layout" "us,ru"
+[  6142.239] (**) Option "xkb_variant" ","
+[  6142.239] (**) Option "xkb_options" "grp:alt_shift_toggle,grp_led:scroll"
+[  6142.239] (II) config/udev: Adding input device Logitech Unifying Device. Wireless PID:1025 (/dev/input/event2)
+[  6142.239] (**) Logitech Unifying Device. Wireless PID:1025: Applying InputClass "evdev pointer catchall"
+[  6142.239] (II) Using input driver 'evdev' for 'Logitech Unifying Device. Wireless PID:1025'
+[  6142.239] (**) Logitech Unifying Device. Wireless PID:1025: always reports core events
+[  6142.239] (**) evdev: Logitech Unifying Device. Wireless PID:1025: Device: "/dev/input/event2"
+[  6142.239] (--) evdev: Logitech Unifying Device. Wireless PID:1025: Vendor 0x46d Product 0xc52b
+[  6142.239] (--) evdev: Logitech Unifying Device. Wireless PID:1025: Found 20 mouse buttons
+[  6142.239] (--) evdev: Logitech Unifying Device. Wireless PID:1025: Found scroll wheel(s)
+[  6142.239] (--) evdev: Logitech Unifying Device. Wireless PID:1025: Found relative axes
+[  6142.239] (--) evdev: Logitech Unifying Device. Wireless PID:1025: Found x and y relative axes
+[  6142.239] (II) evdev: Logitech Unifying Device. Wireless PID:1025: Configuring as mouse
+[  6142.240] (II) evdev: Logitech Unifying Device. Wireless PID:1025: Adding scrollwheel support
+[  6142.240] (**) evdev: Logitech Unifying Device. Wireless PID:1025: YAxisMapping: buttons 4 and 5
+[  6142.240] (**) evdev: Logitech Unifying Device. Wireless PID:1025: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[  6142.240] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:13.0/usb5/5-4/5-4:1.2/0003:046D:C52B.0003/0003:046D:C52B.0004/input/input5/event2"
+[  6142.240] (II) XINPUT: Adding extended input device "Logitech Unifying Device. Wireless PID:1025" (type: MOUSE, id 10)
+[  6142.240] (II) evdev: Logitech Unifying Device. Wireless PID:1025: initialized for relative axes.
+[  6142.240] (**) Logitech Unifying Device. Wireless PID:1025: (accel) keeping acceleration scheme 1
+[  6142.240] (**) Logitech Unifying Device. Wireless PID:1025: (accel) acceleration profile 0
+[  6142.240] (**) Logitech Unifying Device. Wireless PID:1025: (accel) acceleration factor: 2.000
+[  6142.240] (**) Logitech Unifying Device. Wireless PID:1025: (accel) acceleration threshold: 4
+[  6142.240] (II) config/udev: Adding input device Logitech Unifying Device. Wireless PID:1025 (/dev/input/mouse0)
+[  6142.240] (II) No input driver specified, ignoring this device.
+[  6142.240] (II) This device may have been added with another device file.
+[  6142.240] (II) config/udev: Adding input device HDA ATI SB Line (/dev/input/event7)
+[  6142.240] (II) No input driver specified, ignoring this device.
+[  6142.240] (II) This device may have been added with another device file.
+[  6142.240] (II) config/udev: Adding input device HDA ATI SB Line Out (/dev/input/event8)
+[  6142.240] (II) No input driver specified, ignoring this device.
+[  6142.240] (II) This device may have been added with another device file.
+[  6142.241] (II) config/udev: Adding input device HDA ATI SB Front Headphone (/dev/input/event9)
+[  6142.241] (II) No input driver specified, ignoring this device.
+[  6142.241] (II) This device may have been added with another device file.
+[  6142.241] (II) config/udev: Adding input device HDA ATI SB Front Mic (/dev/input/event5)
+[  6142.241] (II) No input driver specified, ignoring this device.
+[  6142.241] (II) This device may have been added with another device file.
+[  6142.241] (II) config/udev: Adding input device HDA ATI SB Rear Mic (/dev/input/event6)
+[  6142.241] (II) No input driver specified, ignoring this device.
+[  6142.241] (II) This device may have been added with another device file.
+[  6142.241] (II) config/udev: Adding input device Eee PC WMI hotkeys (/dev/input/event10)
+[  6142.241] (**) Eee PC WMI hotkeys: Applying InputClass "evdev keyboard catchall"
+[  6142.241] (II) Using input driver 'evdev' for 'Eee PC WMI hotkeys'
+[  6142.241] (**) Eee PC WMI hotkeys: always reports core events
+[  6142.241] (**) evdev: Eee PC WMI hotkeys: Device: "/dev/input/event10"
+[  6142.241] (--) evdev: Eee PC WMI hotkeys: Vendor 0 Product 0
+[  6142.241] (--) evdev: Eee PC WMI hotkeys: Found keys
+[  6142.241] (II) evdev: Eee PC WMI hotkeys: Configuring as keyboard
+[  6142.241] (**) Option "config_info" "udev:/sys/devices/platform/eeepc-wmi/input/input13/event10"
+[  6142.241] (II) XINPUT: Adding extended input device "Eee PC WMI hotkeys" (type: KEYBOARD, id 11)
+[  6142.241] (**) Option "xkb_rules" "evdev"
+[  6142.241] (**) Option "xkb_model" "pc105"
+[  6142.241] (**) Option "xkb_layout" "us,ru"
+[  6142.241] (**) Option "xkb_variant" ","
+[  6142.241] (**) Option "xkb_options" "grp:alt_shift_toggle,grp_led:scroll"
+[  6143.307] (II) XKB: reuse xkmfile /var/lib/xkb/server-34CEB476A3CB596DA76FD7010A029F76732EF824.xkm
+[  6152.002] (II) XKB: reuse xkmfile /var/lib/xkb/server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm
+[  9568.196] (II) evdev: Eee PC WMI hotkeys: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.196] (II) evdev: Logitech Unifying Device. Wireless PID:1025: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.196] (II) evdev:   USB Keyboard: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.196] (II) evdev:   USB Keyboard: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.196] (II) evdev: Power Button: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.196] (II) evdev: Power Button: Close
+[  9568.196] (II) UnloadModule: "evdev"
+[  9568.199] (II) NVIDIA(GPU-0): Deleting GPU-0
+[  9568.729] (EE) Server terminated successfully (0). Closing log file.
