@@ -20,7 +20,7 @@ class LogFrame(object):
         # self.right = deque(islice(stream, right_size), right_size)
 
     def show(self) -> None:
-        print(*self.buff)
+        print(*self.buff, sep='\n')
 
     def shift(self, value: str) -> None:
         self.buff.append(value)
@@ -51,7 +51,7 @@ class LogFrameStream(Iterator):
         try:
             self.data.shift(next(self._input))
         except StopIteration:
-            if self.data._current != len(self.data.buff):
+            if self.data._current != len(self.data.buff) and self.data.buff:
                 self.data.buff.popleft()
             else:
                 raise StopIteration
