@@ -4,13 +4,24 @@ import subprocess
 import sys
 sys.path.append('.')
 import requests
+from time import sleep
 
 from logsearcher import logs_by_mask, get_links_from_html
 
 @pytest.fixture(scope='session')
 def docker(request):
-    return subprocess.run(['docker', 'run', '-p', '8080:80', 'ldyach/logstorage'], 
-                          stdout=subprocess.PIPE)
+    docker = subprocess.Popen(['docker', 'run', '-p', '8080:80', 'ldyach/logstorage'])
+    for _ in range(10):
+        try:
+            requests.get('http://localhost:8080')
+        except requests.ConnectionError:
+            sleep(1)
+        else:
+            break
+    else:
+        raise OSError("Can't run docker container")
+    yield docker
+    docker.terminate()
 
 
 @pytest.fixture(scope='session')
