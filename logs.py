@@ -20,6 +20,8 @@ class LogFrame(object):
         # self.right = deque(islice(stream, right_size), right_size)
 
     def show(self) -> None:
+        print('current:', self.current)
+        print('all:')
         print(*self.buff, sep='\n')
 
     def shift(self, value: str) -> None:

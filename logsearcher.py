@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import requests
 import re
@@ -45,5 +47,17 @@ def log_search(addr: str, mask: str, token: str) -> None:
     search(stream, token)
 
 if __name__ == '__main__':
-
-   log_search('http://localhost:8080', 'dmesg', '96.855757')
+    import subprocess
+    from time import sleep
+    docker = subprocess.Popen(['docker', 'run', '-p', '8080:80', 'ldyach/logstorage'])
+    for _ in range(10):
+        try:
+            requests.get('http://localhost:8080')
+        except requests.ConnectionError:
+            sleep(1)
+        else:
+            break
+    else:
+        raise OSError("Can't run docker container")
+    log_search('http://localhost:8080', sys.argv[1], sys.argv[2])
+    docker.terminate()
