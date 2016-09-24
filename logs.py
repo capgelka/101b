@@ -14,7 +14,9 @@ class LogFrame(object):
     def __init__(self, left_size: int, right_size: int, stream: Iterable[str]) -> None:
         size =  left_size + right_size + 1
         self.buff = deque(islice(stream, size), size)
-        self._current = left_size
+        self._left = self._current = left_size
+        self._right = right_size
+        self.frozen_current = None
         # self.left = deque(islice(stream, left_size), left_size)
         # self.curr = next(iter(stream))
         # self.right = deque(islice(stream, right_size), right_size)
@@ -29,7 +31,26 @@ class LogFrame(object):
 
     @property
     def current(self):
-        return self.buff[self._current]
+        # print('!!!!!!!!!!', self.frozen_current)
+        if self.frozen_current is not None:
+            return self.frozen_current
+        if len(self.buff) > self._current:
+            index = self._current
+        else:
+            index = -1
+        return self.buff[index]
+
+    def fill_right_from_stream(self, stream: Iterable[str]) -> None:
+        if not self.is_full():
+            self.buff.extend(
+                islice(stream, min(self.buff.maxlen - len(self.buff),
+                                   self._right)))
+
+    def is_full(self):
+        return self.buff.maxlen == len(self.buff)
+
+    def fix(self):
+        self.frozen_current = self.current
 
     def __iter__(self):
         return iter(self.buff)
@@ -69,29 +90,34 @@ class LogFrameSearchStream(LogFrameStream):
                  left_size: int = 100, 
                  right_size: int = 100) -> None:
         # print(type(logstream))
-        first = list(islice(logstream, left_size + right_size + 1))
-        found = [(n, x) for (n, x) in enumerate(first) if predicate(x)]
-        if len(found) > 1:
-            raise KeyError('There are more then one string '
-                           'satisfies the predicate: {}'.format("\n".join(x[1] for x in found)))
-        super(LogFrameSearchStream, self).__init__(logstream if not found else [], 
+        # first = list(islice(logstream, left_size + right_size + 1))
+        # found = [(n, x) for (n, x) in enumerate(first) if predicate(x)]
+        # if len(found) > 1:
+        #     raise KeyError('There are more then one string '
+        #                    'satisfies the predicate: {}'.format("\n".join(x[1] for x in found)))
+        # super(LogFrameSearchStream, self).__init__(logstream if not found else [], 
+        #                                            left_size, 
+        #                                            right_size)
+        self.predicate = predicate
+        super(LogFrameSearchStream, self).__init__([],
                                                    left_size, 
                                                    right_size)
-        self.predicate = predicate
-        if found:
-            result_number = found[0][0]
-            self.sucess = True
-            if self.left_size < result_number:
-                self.data = LogFrame(self.left_size, self.right_size, 
-                                     chain(first[result_number - self.left_size:], 
-                                           self._input))
-            if self.left_size > result_number:
-                self.data = LogFrame(result_number, 
-                                     self.right_size,
-                                     first[:result_number + self.right_size])
+        self._input = logstream
+        if False:
+        # if found:
+        #     result_number = found[0][0]
+        #     self.sucess = True
+        #     if self.left_size < result_number:
+        #         self.data = LogFrame(self.left_size, self.right_size, 
+        #                              chain(first[result_number - self.left_size:], 
+        #                                    self._input))
+        #     if self.left_size > result_number:
+        #         self.data = LogFrame(result_number, 
+        #                              self.right_size,
+        #                              first[:result_number + self.right_size])
             self._stopped = True
         else:
-            self.sucess = False
+            # self.sucess = False
             self._stopped = False
 
     def __next__(self) -> LogFrame:
@@ -100,18 +126,20 @@ class LogFrameSearchStream(LogFrameStream):
         return super(LogFrameSearchStream, self).__next__()
 
     def search(self) -> Optional[LogFrame]:
-        if self.sucess:
-            result = self.data
+        # if self.sucess:
+        #     result = self.data
             # return self.data
-        elif self._stopped:
+        if self._stopped:
             result = None
             # return None
         else:
             try:
                 result = next(frame for frame in self if self.predicate(frame.current))
                 self.sucess = True
+                result.fix()
             except StopIteration:
                 result = None
+            self.data.fill_right_from_stream(self._input)
             self._stopped = True
         return result
         # return next(filter(lambda frame: self.predicate(frame.current), self))

@@ -55,11 +55,11 @@ def test_mask(docker, html, mask, count):
                            'current: [  6152.002] (II) XKB: reuse xkmfile'
                            ' /var/lib/xkb/server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm',
                            201, None, None),
-                        ('Xo', '6141.941', None, None, KeyError, 
-                         'There are more then one string satisfies the predicate:'
-                         ' [  6141.941] \tBefore reporting problems, check http:/'
-                         '/wiki.x.org\n[  6141.941] Markers: (--) probed, (**) fr'
-                         'om config file, (==) default setting,'),
+                        # ('Xo', '6141.941', None, None, KeyError, 
+                        #  'There are more then one string satisfies the predicate:'
+                        #  ' [  6141.941] \tBefore reporting problems, check http:/'
+                        #  '/wiki.x.org\n[  6141.941] Markers: (--) probed, (**) fr'
+                        #  'om config file, (==) default setting,'),
                         ('No', '6141.941', 'No lines with specified mask found', 0,
                           None, None),
                         ('*', 'cpuset',
