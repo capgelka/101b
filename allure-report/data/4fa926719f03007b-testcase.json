@@ -1,0 +1,50 @@
+{
+  "uid" : "4fa926719f03007b",
+  "name" : "test_search[Xo-6152.002-current: [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-201-KeyError-More than one log matches the mask!]",
+  "title" : "002-current:  [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-201-KeyError-More than one log matches the mask!]",
+  "time" : {
+    "start" : 1474856591927,
+    "stop" : 1474856591932,
+    "duration" : 5
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "3901483f-2657-47c7-8293-de80a8c49391-attachment.txt",
+    "type" : "text/plain",
+    "size" : 105,
+    "uid" : "7fdef8b08c06dc77"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

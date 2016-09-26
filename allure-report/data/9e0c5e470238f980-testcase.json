@@ -1,0 +1,50 @@
+{
+  "uid" : "9e0c5e470238f980",
+  "name" : "test_search[No-6141.941-No lines with specified mask found-0-None-None]",
+  "title" : "Test search [No-6141.941-No lines with specified mask found-0-None-None]",
+  "time" : {
+    "start" : 1474856591933,
+    "stop" : 1474856591938,
+    "duration" : 5
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "b589181e-175c-4d99-9a68-29064f2f0a73-attachment.txt",
+    "type" : "text/plain",
+    "size" : 105,
+    "uid" : "4fb2a3d7be87a7a5"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

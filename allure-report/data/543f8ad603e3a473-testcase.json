@@ -1,0 +1,44 @@
+{
+  "uid" : "543f8ad603e3a473",
+  "name" : "test_mask[Xo-KeyError]",
+  "title" : "Test mask [Xo-KeyError]",
+  "time" : {
+    "start" : 1474856591904,
+    "stop" : 1474856591905,
+    "duration" : 1
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

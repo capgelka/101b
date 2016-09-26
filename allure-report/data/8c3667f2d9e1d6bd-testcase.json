@@ -1,0 +1,50 @@
+{
+  "uid" : "8c3667f2d9e1d6bd",
+  "name" : "test_mask[Xo*.3-str]",
+  "title" : "Test mask [Xo*.3-str]",
+  "time" : {
+    "start" : 1474856591906,
+    "stop" : 1474856591907,
+    "duration" : 1
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "87b5a714-a7a1-4dc4-9c11-528c8e526796-attachment.txt",
+    "type" : "text/plain",
+    "size" : 14,
+    "uid" : "b1e431e370602463"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,50 @@
+{
+  "uid" : "c0eb896f4d2d64db",
+  "name" : "test_search[dmesg-cpuset-current: [    0.000000] Initializing cgroup subsys cpuset-101-None-None]",
+  "title" : "Test search [dmesg-cpuset-current:  [    0.000000] Initializing cgroup subsys cpuset-101-None-None]",
+  "time" : {
+    "start" : 1474856591938,
+    "stop" : 1474856591948,
+    "duration" : 10
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "d00916c7-06a7-4c4a-ad47-895c3ced95da-attachment.txt",
+    "type" : "text/plain",
+    "size" : 217,
+    "uid" : "8d76400839990e1"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

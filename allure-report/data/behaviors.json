@@ -1,0 +1,147 @@
+{
+  "features" : [ {
+    "title" : "Without feature",
+    "statistic" : {
+      "total" : 11,
+      "passed" : 11,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "stories" : [ {
+      "uid" : "3faad9fb7a64d804",
+      "title" : "Without story",
+      "statistic" : {
+        "total" : 11,
+        "passed" : 11,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 0,
+        "broken" : 0
+      },
+      "testCases" : [ {
+        "uid" : "7a23e459800701f",
+        "name" : "test_mask[notexists-NoneType]",
+        "title" : "Test mask [notexists-NoneType]",
+        "time" : {
+          "start" : 1474856590863,
+          "stop" : 1474856591899,
+          "duration" : 1036
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "90f4ffc369537448",
+        "name" : "test_mask[dmesg-str]",
+        "title" : "Test mask [dmesg-str]",
+        "time" : {
+          "start" : 1474856591901,
+          "stop" : 1474856591903,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "543f8ad603e3a473",
+        "name" : "test_mask[Xo-KeyError]",
+        "title" : "Test mask [Xo-KeyError]",
+        "time" : {
+          "start" : 1474856591904,
+          "stop" : 1474856591905,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8c3667f2d9e1d6bd",
+        "name" : "test_mask[Xo*.3-str]",
+        "title" : "Test mask [Xo*.3-str]",
+        "time" : {
+          "start" : 1474856591906,
+          "stop" : 1474856591907,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8f98a7bf475dbb82",
+        "name" : "test_mask[d\\w+-str]",
+        "title" : "Test mask [d\\w+-str]",
+        "time" : {
+          "start" : 1474856591908,
+          "stop" : 1474856591910,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "75714d88bd299c97",
+        "name" : "test_mask[.*-KeyError]",
+        "title" : "Test mask [.*-KeyError]",
+        "time" : {
+          "start" : 1474856591910,
+          "stop" : 1474856591912,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "53979346a52a9d40",
+        "name" : "test_search[Xorg.02-6152.002-current: [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-115-None-None]",
+        "title" : "002-current:  [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-115-None-None]",
+        "time" : {
+          "start" : 1474856591912,
+          "stop" : 1474856591926,
+          "duration" : 14
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "4fa926719f03007b",
+        "name" : "test_search[Xo-6152.002-current: [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-201-KeyError-More than one log matches the mask!]",
+        "title" : "002-current:  [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-201-KeyError-More than one log matches the mask!]",
+        "time" : {
+          "start" : 1474856591927,
+          "stop" : 1474856591932,
+          "duration" : 5
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "9e0c5e470238f980",
+        "name" : "test_search[No-6141.941-No lines with specified mask found-0-None-None]",
+        "title" : "Test search [No-6141.941-No lines with specified mask found-0-None-None]",
+        "time" : {
+          "start" : 1474856591933,
+          "stop" : 1474856591938,
+          "duration" : 5
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "c0eb896f4d2d64db",
+        "name" : "test_search[dmesg-cpuset-current: [    0.000000] Initializing cgroup subsys cpuset-101-None-None]",
+        "title" : "Test search [dmesg-cpuset-current:  [    0.000000] Initializing cgroup subsys cpuset-101-None-None]",
+        "time" : {
+          "start" : 1474856591938,
+          "stop" : 1474856591948,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8d6fc2d09abe32ec",
+        "name" : "test_search[dmesg- 96.855764-current: [   96.855764] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N.A, 4000 mBm), (N.A)-101-None-None]",
+        "title" : "855764-current:  [   96.855764] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N.A, 4000 mBm), (N.A)-101-None-None]",
+        "time" : {
+          "start" : 1474856591948,
+          "stop" : 1474856591966,
+          "duration" : 18
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

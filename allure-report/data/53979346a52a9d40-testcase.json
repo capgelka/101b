@@ -1,0 +1,50 @@
+{
+  "uid" : "53979346a52a9d40",
+  "name" : "test_search[Xorg.02-6152.002-current: [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-115-None-None]",
+  "title" : "002-current:  [  6152.002] (II) XKB: reuse xkmfile .var.lib.xkb.server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm-115-None-None]",
+  "time" : {
+    "start" : 1474856591912,
+    "stop" : 1474856591926,
+    "duration" : 14
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "cd9bb39c-2202-4358-829c-1c2be9652edf-attachment.txt",
+    "type" : "text/plain",
+    "size" : 219,
+    "uid" : "fe2ee309a0df4bae"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

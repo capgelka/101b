@@ -1,0 +1,50 @@
+{
+  "uid" : "8d6fc2d09abe32ec",
+  "name" : "test_search[dmesg- 96.855764-current: [   96.855764] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N.A, 4000 mBm), (N.A)-101-None-None]",
+  "title" : "855764-current:  [   96.855764] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N.A, 4000 mBm), (N.A)-101-None-None]",
+  "time" : {
+    "start" : 1474856591948,
+    "stop" : 1474856591966,
+    "duration" : 18
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "92b8bc56-d1d3-4d1d-bb9d-6954c4c7c445-attachment.txt",
+    "type" : "text/plain",
+    "size" : 217,
+    "uid" : "9eaf00042c348981"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}

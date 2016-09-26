@@ -1,0 +1,56 @@
+{
+  "uid" : "7a23e459800701f",
+  "name" : "test_mask[notexists-NoneType]",
+  "title" : "Test mask [notexists-NoneType]",
+  "time" : {
+    "start" : 1474856590863,
+    "stop" : 1474856591899,
+    "duration" : 1036
+  },
+  "summary" : {
+    "attachments" : 2,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "940992fb26143f23",
+    "name" : "test_logsearcher",
+    "title" : "Test logsearcher"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout setup",
+    "source" : "7c1eb660-0680-40df-a347-287a438a74f3-attachment.txt",
+    "type" : "text/plain",
+    "size" : 207,
+    "uid" : "586e9263a65c1eb3"
+  }, {
+    "title" : "Captured stdout call",
+    "source" : "13f0a2e6-bf87-412f-8d94-e396496a155a-attachment.txt",
+    "type" : "text/plain",
+    "size" : 19,
+    "uid" : "993a9d023e6a79e"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_logsearcher"
+  }, {
+    "name" : "host",
+    "value" : "DLD"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "30246-MainThread"
+  } ],
+  "parameters" : [ ]
+}
