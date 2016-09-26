@@ -6,7 +6,7 @@ sys.path.append('.')
 import requests
 from time import sleep
 
-from logsearcher import log_search, get_links_from_html
+from logsearcher import log_search, get_link_from_html
 
 @pytest.yield_fixture(scope='session')
 def docker(request):
@@ -29,19 +29,21 @@ def html(request, docker):
     return requests.get('http://localhost:8080', auth=('test', 'test')).text
 
 
-@pytest.mark.parametrize(['mask', 'count'], 
-                         [('notexists', 0),
-                          ('dmesg', 1),
-                          ('Xo', 2),
-                          ('Xo*.3', 1),
-                          (r'd\w+', 1),
-                          ('.*', 5)
+@pytest.mark.parametrize(['mask', 'result_type'], 
+                         [('notexists', type(None)),
+                          ('dmesg', str),
+                          ('Xo', KeyError),
+                          ('Xo*.3', str),
+                          (r'd\w+', str),
+                          ('.*', KeyError)
                          ])
-
-
-def test_mask(docker, html, mask, count):
-    logs = list(get_links_from_html(html, mask))
-    assert len(logs) == count
+def test_mask(docker, html, mask, result_type):
+    if result_type is KeyError:
+        with pytest.raises(result_type, message="More than one log matches the mask!"):
+            get_link_from_html(html, mask)
+    else:
+        print (result_type)
+        isinstance(get_link_from_html(html, mask), result_type)
 
 
 @pytest.mark.parametrize(['mask', 'token', 'current', 'count', 'expected_exc', 'exc_message'], 
@@ -52,16 +54,8 @@ def test_mask(docker, html, mask, count):
                          ('Xo', '6152.002', 
                            'current: [  6152.002] (II) XKB: reuse xkmfile'
                            ' /var/lib/xkb/server-FFD7F0C098264F028A1D8B92D2B11BFAFFBFB85B.xkm',
-                           201, None, None),
-                        # ('Xo', '6141.941', None, None, KeyError, 
-                        #  'There are more then one string satisfies the predicate:'
-                        #  ' [  6141.941] \tBefore reporting problems, check http:/'
-                        #  '/wiki.x.org\n[  6141.941] Markers: (--) probed, (**) fr'
-                        #  'om config file, (==) default setting,'),
+                           201, KeyError, 'More than one log matches the mask!'),
                         ('No', '6141.941', 'No lines with specified mask found', 0,
-                          None, None),
-                        ('*', 'cpuset',
-                         'current: [    0.000000] Initializing cgroup subsys cpuset', 201,
                           None, None),
                         ('dmesg', 'cpuset',
                          'current: [    0.000000] Initializing cgroup subsys cpuset', 101,

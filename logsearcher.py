@@ -5,7 +5,7 @@ import requests
 import re
 from fnmatch import fnmatch
 
-from typing import Tuple, NewType, Iterable
+from typing import Tuple, NewType, Iterable, Optional
 
 
 Credentials = NewType('Credentials', Tuple[str, str])
@@ -23,23 +23,36 @@ def auth_data(addr: str) -> Credentials:
         raise KeyError('No creds for adress {} found'.format(addr))
 
 
-def get_links_from_html(html: str, mask: str=None) -> Iterable[str]:
+def get_link_from_html(html: str, mask: str=None) -> Optional[str]:
     pattern = re.compile(r'<a href="(.*?)">(.*?)</a>')
-    yield from (match.group(1) for match in re.finditer(pattern, html)
-                if mask is None
-                or fnmatch(match.group(2), mask) 
-                or re.match(mask, match.group(2)))
+    gen = (match.group(1) for match in re.finditer(pattern, html)
+           if mask is None
+           or fnmatch(match.group(2), mask) 
+           or re.match(mask, match.group(2)))
+    try:   
+        result = next(gen)
+    except StopIteration:
+        result = None
+    else:
+        try:
+            next(gen)
+        except StopIteration:
+            pass
+        else:
+            raise KeyError('More than one log matches the mask!')
+    return result
 
 
 def logs_by_mask(addr: str, mask: str) -> Iterable[str]:
     creds = auth_data(addr)
-    for link in get_links_from_html(requests.get(addr, auth=creds).text,
-                                    mask):
-        yield from map(lambda x: x.decode('utf8'), 
-                       requests.get(link if link.startswith('http')
-                                             else "/".join([addr, link]), 
-                                    stream=True,
-                                    auth=creds).iter_lines())
+    link = get_link_from_html(requests.get(addr, auth=creds).text, mask)
+    if link is None:
+        return
+    yield from map(lambda x: x.decode('utf8'), 
+                   requests.get(link if link.startswith('http')
+                                         else "/".join([addr, link]), 
+                                stream=True,
+                                auth=creds).iter_lines())
 
 
 def log_search(addr: str, mask: str, token: str) -> None:
