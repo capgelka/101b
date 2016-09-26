@@ -8,7 +8,7 @@ from time import sleep
 
 from logsearcher import log_search, get_links_from_html
 
-@pytest.fixture(scope='session')
+@pytest.yield_fixture(scope='session')
 def docker(request):
     docker = subprocess.Popen(['docker', 'run', '-p', '8080:80', 'ldyach/logstorage'])
     for _ in range(10):
@@ -28,10 +28,7 @@ def docker(request):
 def html(request, docker):
     return requests.get('http://localhost:8080', auth=('test', 'test')).text
 
-# def test_fake():
-#     assert 1 == 1
 
-# @pytest.mark.usefixtures(docker)
 @pytest.mark.parametrize(['mask', 'count'], 
                          [('notexists', 0),
                           ('dmesg', 1),
@@ -40,7 +37,8 @@ def html(request, docker):
                           (r'd\w+', 1),
                           ('.*', 5)
                          ])
-# @pytest.mark.usefixtures(docker)
+
+
 def test_mask(docker, html, mask, count):
     logs = list(get_links_from_html(html, mask))
     assert len(logs) == count
@@ -72,11 +70,6 @@ def test_mask(docker, html, mask, count):
                          'current: [   96.855764] cfg80211:   (57240000 KHz'
                          ' - 63720000 KHz @ 2160000 KHz), (N/A, 4000 mBm), (N/A)', 101,
                           None, None)
-                          # ('dmesg', 1),
-                          # ('Xo', 2),
-                          # ('Xo*.3', 1),
-                          # (r'd\w+', 1),
-                          # ('.*', 5)
                          ])
 
 
@@ -89,7 +82,4 @@ def test_search(docker, capsys, mask, token, current, count, expected_exc, exc_m
         out, _ = capsys.readouterr()
         out_lines = out.split('\n')[:-1]
         assert out_lines[0] == current
-        # raise Exception('!!!!' + out_lines[-1]+ '!!!!!)')
         assert len(out_lines[2:]) == count
-        # print(out_lines)
-    # raise Exception(out + str(type(out)))
