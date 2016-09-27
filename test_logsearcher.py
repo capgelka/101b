@@ -42,8 +42,7 @@ def test_mask(docker, html, mask, result_type):
         with pytest.raises(result_type, message="More than one log matches the mask!"):
             get_link_from_html(html, mask)
     else:
-        print (result_type)
-        isinstance(get_link_from_html(html, mask), result_type)
+        assert isinstance(get_link_from_html(html, mask), result_type)
 
 
 @pytest.mark.parametrize(['mask', 'token', 'current', 'count', 'expected_exc', 'exc_message'], 
